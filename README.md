@@ -309,3 +309,116 @@ Damos click en la rama **master**. Vamos que ya no está localmente, pero aun ap
 
 ![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/96d6764f-10f5-4a3a-8c56-47c92b96795d)
 
+Presionamos **Ctrl+Shift+P** para abrir la **Command Palette**. Escribimos **Git: Fetch** y seleccionamos **Git: Fetch (Prune)**. Este comando actualizará las ramas de origen en la instantánea local y eliminará aquellas que ya no están allí.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/107c5272-f094-454d-9780-1b996ac3e97c)
+
+Ya no vemos **dev**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/f8ed8e9b-9e74-4ce2-9873-43e9c1d9fd7a)
+
+### Ejercicio 6: Administrando ramas desde Azure DevOps
+
+#### Tarea 1: Creando una nueva rama
+
+Vamos a la pestaña del navegor con Azure DevOps. Navegamos a **Repos | Branches**. Hacemos click en **New branch**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/1e230391-098b-45be-9627-e4cc05c60bf7)
+
+Le ponemos nombre de **release**. Utilice el menú desplegable **Work items to link** para seleccionar uno o más elementos de trabajo para vincularlos a esta nueva rama. Haga clic en **Create branch** para crearla.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/b62aea33-c80b-4da0-af41-3ba5b571fb86)
+
+Una vez creada la rama, estará disponible en la lista.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/671252d3-43cf-4d0a-8609-8ff9f218eaef)
+
+Volvemos a VS. Presionamos **Ctrl+Shift+P** para abrir la **Command Palette**. Escribimos **Git: Fetch** y seleccionamos **Git: Fetch**. Este comando actualizará las ramas de origen localmente.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/4b984855-570f-43f8-b8c0-f22267ab7496)
+
+Hacemos click en la rama **master**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/1d3c692b-3e1a-471c-a923-a1501ec0c1d5)
+
+Seleccionamos **origin/release**. Esto creará una nueva rama local llamada "release" y la verificará.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/c2557047-7561-46d7-bda9-058331db5b0f)
+
+#### Tarea 2: eliminando una rama
+
+Volvemos a Azure DevOps y hacemos click en **Delete branch** desde más acciones para borrar la rama
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/fe338ec4-799b-40c5-a94c-1e135e8384ba)
+
+Puede restaurar la rama si lo desea buscando el nombre excato de la rama. Se hace click en **Restore branch**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/ff43cdfe-28cf-431d-b711-6c3d640ed148)
+
+#### Tarea 3: Bloqueando una rama
+
+Desde el menu de **master** selecciona **Lock**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/528001c6-b090-488a-a19e-61f3dcc0a250)
+
+Ahora la rama está bloqueada
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/0dd78f1b-d9aa-4575-86bf-0186f6ef27a6)
+
+Para desbloquearla hacemos el mismo proceso
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/6759c22a-9b5a-4eb8-84f8-4513f54e2629)
+
+#### Tarea 4: Etiquetando un release
+
+Si bien puede que no parezca mucho, el equipo de producto decidió que esta versión del sitio es exactamente lo que se necesita para la versión 1.1. Para marcarlo como tal, navegue hasta la pestaña **Tags**.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/bcd5fa8e-586a-4368-a798-c02e3eb9f5ae)
+
+Hacemos click en **Create Tag**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/eb0ee1d0-2b25-4102-bd6e-21b2bd958951)}
+
+Ingrese un nombre de **"v1.1"** y una descripción de **"¡Excelente lanzamiento!"**. Haga clic en **Create**.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/eaa25875-296e-4982-8f30-583566afe4c3)
+
+Ahora hemos etiquetado el proyecto en esta versión. Se pueden etiquetar commits por diversos motivos y Azure DevOps ofrece la flexibilidad de editarlas y eliminarlas, así como administrar sus permisos.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/d9c24621-6c2f-4a97-a725-bbc084fbd718)
+
+### Ejercicio 7: Administrando repositorios
+
+#### Tarea 1: Creando un nuevo repo desde Azure DevOps
+
+En el menú desplegable en el proyecto **+**, seleccionamos **New repository**.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/e7a609d1-cb0c-47b5-94d7-3886fb430488)
+
+Ponemos como nombre del repositorio en **"New repo"**. Haga clic en **Create**. 
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/b829a50a-373c-4670-86e7-a6170be0a55b)
+
+Ya está. El repositorio está listo. Ahora podemos clonarlo con Visual Studio o otras herramientas.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/2ee4d773-025d-4ad0-836b-999311f6a4fb)
+
+#### Tarea 2: Eliminando y renombrando Git repos
+
+A veces necesitamos cambiar el nombre o eliminar un repositorio, lo cual es muy fácil. Abrimos la configuración del proyecto.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/0f83ced4-a26f-40f9-9e08-6a8e118374ce)
+
+Seleccionamos **Repositories** debajo de **Repos**
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/0fdb6df5-9072-4405-899b-7cc6fd7d48e9)
+
+En el menú de **New Repo**, seleccionamos **Delete repository**. También podemos cambiar el nombre acá.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/d178bb52-f3d1-4283-9a34-e8175e65d5ac)
+
+Ingresamos el nombre **New Repo** para confirmar el repositorio y hacemos clic en **Delete**.
+
+![image](https://github.com/bricenojuliana/AzureDevOpsLabs/assets/124324787/bf32fbd0-25f5-4191-aa1f-6e23885a19ec)
+
+
